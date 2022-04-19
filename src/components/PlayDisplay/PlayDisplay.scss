@@ -1,0 +1,45 @@
+.main_display {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_section {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #7D99FC 0%, rgba(88, 123, 247, 0.59) 100%);
+}
+.game_level {
+    margin-top: 5%;
+    width: 50%;
+    height: 15%;
+    font-size: 40pt;
+    line-height: 32px;
+    border-radius: 20px;
+}
+.game_confirm {
+    margin-top: 5%;
+    font-size: 20pt;
+    border-radius: 15px;
+    width: 20%;
+    background-color: #CEED0E;
+    color: black;
+    border: none;
+}
+.title_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #01CBF8;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 10%;
+}

@@ -1,0 +1,21 @@
+.info_display {
+    background: linear-gradient(180deg, rgba(255, 0, 168, 0.64) 16.98%, rgba(41, 195, 228, 0.64) 100%);
+    width:100%; 
+    height:100%;
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction:column;
+    border-radius: 20px;
+}
+
+.info_values {
+    text-align: center;
+    width:40%; 
+    background-color:white;
+}
+
+.info_div {
+    margin-top: 5%;
+    width:85%;
+}

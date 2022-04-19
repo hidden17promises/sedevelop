@@ -1,0 +1,58 @@
+.login_column2 {
+    height: 100vh;
+    background: rgba(56, 183, 191, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_main_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form {
+    margin-bottom: 7%;
+    width: 55vh;
+}
+
+.login_button {
+    margin-bottom:4%;
+    width: 44vh;
+}
+
+.login_button2 {
+    width: 22vh;
+}
+
+.second_button_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_column1 {
+    background-image: url("../../public/a.png");
+    background-size: 100% 100%;
+    width: 100.8%;
+} 
+
+.image_logo {
+    position: absolute;
+    margin:auto;
+}
+
+.middle_logo {
+    position: absolute;  left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px;
+    padding: 0;
+}
