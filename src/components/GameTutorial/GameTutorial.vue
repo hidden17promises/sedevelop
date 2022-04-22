@@ -1,21 +1,22 @@
 <template>
-    <div class="main_display">
-        <div class="main_section">
-            <h3 class="title_header">Тоглоомын түвшин</h3>
-            <div class="text_section">
-    <p class="tutorial_text">
-        1. Өгөгдсөн  хайх зүйлийг цаг дуусахаас өмнө mouse буюу хулганаараа олж дарах хэрэгтэй.
-    </p>
-    <p class="tutorial_text">
-        2. Заасан хугацаанд олж чадаагүй бол ялагдана.
-    </p>
-    <p class="tutorial_text">
-        3. Хэр хурдан хугацааны дотор олохоос хамаарч оноо өгөгдөнө.
-    </p>
-            </div>
-            <b-button class="tutorial_confirm" variant="success" @click="back_button()">
-                Гарах
-            </b-button>
+    <div class="tutorial_display">
+        <h2 class="tutorial_header">Тоглоомын заавар</h2>
+        <div>
+            <ol style="margin-top:10%">
+                <li
+            style="font-size:20pt; margin-bottom:5%; margin-left:5%; margin-right:5%; color:white;">
+                    Өгөгдсөн хайх зүйлийг цаг
+                    дуусахаас өмнө mouse буюу хулганаараа олж дарах хэрэгтэй.
+                </li>
+                <li
+            style="font-size:20pt; margin-bottom:5%; margin-left:5%; margin-right:5%; color:white;">
+                    Заасан хугацаанд олж чадаагүй бол ялагдана.
+                </li>
+                <li
+            style="font-size:20pt; margin-bottom:5%; margin-left:5%; margin-right:5%; color:white;">
+                    Хэр хурдан хугацааны дотор олохоос хамаарч оноо  өгөгдөнө.
+                </li>
+            </ol>
         </div>
     </div>
 </template>
@@ -28,9 +29,7 @@ export default {
     };
   },
   methods: {
-    back_button() {
-      this.$router.push({ name: 'MainDisplay' });
-    },
+
   },
 };
 </script>

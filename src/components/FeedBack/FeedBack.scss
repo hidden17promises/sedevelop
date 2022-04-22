@@ -1,4 +1,4 @@
-.tutorial_display {
+.badge_display {
     width:100%; 
     height:100%;
     border-radius: 20px;
@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.tutorial_header {
+.badge_header {
     background-color:#01CBF8;
     color: white;
     margin-top:10%;
@@ -19,4 +19,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.feedback_button {
+    margin-top:5%;
+    width: 30%;
+    height: 8vh;
+    font-size: 16pt;
 }

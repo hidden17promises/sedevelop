@@ -1,4 +1,4 @@
-.tutorial_display {
+.play_display {
     width:100%; 
     height:100%;
     border-radius: 20px;
@@ -9,8 +9,8 @@
     align-items: center;
 }
 
-.tutorial_header {
-    background-color:#01CBF8;
+.play_header {
+    background-color:#01CBF8; 
     color: white;
     margin-top:10%;
     width:80%; 
@@ -19,4 +19,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.play_button {
+    margin-top: 3.5%;
+    margin-bottom: 2.5%;
+    width: 80%;
+    height: 15%;
+    font-size: 28pt;
+}
+
+.play_button:hover {
+    color: beige;
+    background:linear-gradient(180deg,#5E78FF 6.56%, rgba(247, 28, 252, 0.34) 100%);
+    border: 1px solid #FF00D6;
+}
+
+.play_confirm {
+    margin-top:3%;
+    width: 30%;
+    height: 7vh;
 }

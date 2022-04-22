@@ -8,7 +8,7 @@
         <b-col></b-col>
         <b-col class="login_column2">
           <b-form @submit.prevent="sendUserData()"
-            class="login_main_form" v-if="pressed == 'login'">
+            class="login_main_form" v-if="pressed_type == 'login'">
 
             <img
               style="margin-bottom:10%"
@@ -36,37 +36,44 @@
             </b-button>
 
             <div class="second_button_group">
-              <b-button style="margin-right:4%;" class="login_button2" variant='outline-light'>
+              <b-button style="margin-right:4%;" class="login_button2" variant='outline-light'
+                @click="new_password('forget_password')">
                 Нууц үг сэргээх
               </b-button>
               <b-button class="login_button2" variant='outline-light'
-                @click="register_display('register')">
+                @click="register_jump('register_section')">
                 Бүртгүүлэх
               </b-button>
             </div>
           </b-form>
-          <b-form class="login_main_form" v-else-if="pressed == 'register'">
-            <RegisterDisplay @register="register_display"/>
+          <b-form class="login_main_form" v-else-if="pressed_type == 'forget_password'">
+            <ForgetPassword @forget="new_password"/>
+          </b-form>
+          <b-form class="login_main_form" v-else-if="pressed_type == 'register_section'">
+            <RegisterDisplay @register_form="register_jump"/>
           </b-form>
         </b-col>
     </b-row>
 </template>
 
 <script>
+import RegisterDisplay from './Register/Register_display.vue';
+import ForgetPassword from './ForgetPassword/ForgetPassword.vue';
 // import axios from 'axios';
 // import router from 'vue-router';
-import RegisterDisplay from './Register/Register_display.vue';
 
 export default {
   components: {
     RegisterDisplay,
+    ForgetPassword,
   },
   data() {
     return {
       user: '',
       password: '',
       login: false,
-      pressed: 'login',
+      pressed_type: 'login',
+      register: '',
     };
   },
   methods: {
@@ -97,8 +104,12 @@ export default {
       }
     },
 
-    register_display(name) {
-      this.pressed = name;
+    register_jump(name) {
+      this.pressed_type = name;
+    },
+
+    new_password(name) {
+      this.pressed_type = name;
     },
 
     onlyNumber($event) {

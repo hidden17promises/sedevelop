@@ -3,7 +3,7 @@
         <img
               style="margin-bottom:10%"
               src="../../../public/last.png" width="350vh;" height="150px" alt="logo"/>
-        <form>
+        <b-form>
             <!-- Phone Number -->
             <span class="register_label">Утасны дугаар</span>
             <b-input class="register_input"
@@ -22,7 +22,7 @@
 
             <!-- Birth Date -->
             <span class="register_label">Төрсөн огноо</span>
-            <b-input class="register_input" type``="date"
+            <b-input class="register_input" type="date"
                 v-model="birth_date" placeholder="Төрсөн өдөр">
             </b-input>
 
@@ -44,7 +44,7 @@
             <span class="register_label">Нууц үг давтах</span>
             <b-input class="register_input"
                 v-model="rep_password" type="password" placeholder="Нууц үг давтах"></b-input>
-        </form>
+        </b-form>
         <div class="register_button">
             <b-button size='sm' style="width:150px" pill variant="primary">Бүртгүүлэх</b-button>
             <b-button size='sm' style="width:150px" pill variant="warning"
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     back_to_login(name) {
-      this.$emit('register', name);
+      this.$emit('register_form', name);
     },
 
     // send_new_user() {
