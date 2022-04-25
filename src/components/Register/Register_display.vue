@@ -56,7 +56,7 @@
 </template>
 
 <script>
-// import axios from 'axios';
+import axios from 'axios';
 
 export default {
   data() {
@@ -68,6 +68,7 @@ export default {
       gender: '',
       password: '',
       rep_password: '',
+      register_user: {},
     };
   },
   methods: {
@@ -75,27 +76,30 @@ export default {
       this.$emit('register_form', name);
     },
 
-    // send_new_user() {
-    //   const new_user = {
-    //     phone_number: this.phone_number,
-    //     last_name: this.last_name,
-    //     first_name: this.first_name,
-    //     birth_date: this.birth_date,
-    //     gender: this.gender,
-    //     password: this.password,
-    //     rep_password: this.rep_password,
-    //   };
+    send_new_user() {
+      this.register_user = {
+        phone_number: this.phone_number,
+        last_name: this.last_name,
+        first_name: this.first_name,
+        birth_date: this.birth_date,
+        gender: this.gender,
+        password: this.password,
+        rep_password: this.rep_password,
+      };
 
-    //   axios.post({ new_user })
-    //     .then((res) => {
-    //       // eslint-disable-next-linec
-    //       console.log(res);
-    //     })
-    //     .catch((error) => {
-    //       // eslint-disable-next-linec
-    //       console.log(error);
-    //     });
-    // },
+      const url = 'Энд EndPoint ийнхоо URL-ийг бич /Controller/';
+      // Жишээ нь 192.168.0.1:8080/Register
+      axios.post(`/${url}`, { params: this.register_user })
+        .then((res) => {
+          // eslint-disable-next-linec
+          console.log(res);
+          this.back_to_login('login');
+        })
+        .catch((error) => {
+          // eslint-disable-next-linec
+          console.log(error);
+        });
+    },
   },
 };
 </script>
