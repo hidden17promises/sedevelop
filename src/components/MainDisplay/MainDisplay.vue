@@ -103,6 +103,9 @@
                 <div v-else-if="clicked == 'feedback'" style="width:100%;height:100%;" >
                     <FeedBack />
                 </div>
+                <div v-else-if="clicked == 'gamesection'" style="width:100%;height:100%;" >
+                    <GameSection />
+                </div>
             </div>
             <div class="main_section_score">
                 <div class="main_section_score_title">Тэргүүлэгчид</div>
@@ -127,6 +130,7 @@ import GameTutorial from '../GameTutorial/GameTutorial.vue';
 import BadgeList from '../BadgeList/BadgeList.vue';
 import BadgeTypes from '../BadgeList/BadgeTypes/BadgeTypes.vue';
 import FeedBack from '../FeedBack/FeedBack.vue';
+import GameSection from '../GameSection/GameSection.vue';
 
 export default {
   components: {
@@ -136,6 +140,7 @@ export default {
     BadgeList,
     BadgeTypes,
     FeedBack,
+    GameSection,
   },
   data() {
     return {
@@ -175,6 +180,12 @@ export default {
     feed_back() {
       this.clicked = 'feedback';
     },
+  },
+  created() {
+    console.log(this.$route.params.type);
+    if (this.$route.params.type) {
+      this.clicked = this.$route.params.type;
+    }
   },
 };
 </script>

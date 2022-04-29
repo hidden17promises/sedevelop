@@ -6,7 +6,7 @@
             @click="chosen_level(b.level)" class="play_button">
             {{b.label}}
         </b-button>
-        <b-button variant="success" class="play_confirm">Тоглох</b-button>
+        <b-button variant="success" @click="confirmed_play()" class="play_confirm">Тоглох</b-button>
     </div>
 </template>
 
@@ -33,6 +33,12 @@ export default {
           button.color = '';
         }
       });
+    },
+
+    confirmed_play() {
+      if (this.level) {
+        this.$router.push({ path: `/game/${this.level}` });
+      }
     },
   },
 };

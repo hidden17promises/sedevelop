@@ -1,0 +1,31 @@
+.badge_display {
+    width:100%; 
+    height:100%;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #7D99FC 0%, rgba(88, 123, 247, 0.59) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.badge_header {
+    background-color:#43f801;
+    color: white;
+    margin-top:10%;
+    width:80%; 
+    height: 40%;
+    border-radius:10px;
+    font-size: 40pt;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback_button {
+    margin-top:5%;
+    width: 30%;
+    height: 8vh;
+    font-size: 16pt;
+}
